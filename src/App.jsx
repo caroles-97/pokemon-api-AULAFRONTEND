@@ -78,7 +78,11 @@ export default function App() {
         )}
 
         <div className="flex gap-3">
-          {/* Botão para voltar ao Pokémon anterior. */}
+          {/*
+            Botão "Anterior".
+            Quando clica, o estado 'id' diminui 1, então a aplicação busca o Pokémon anterior.
+            O atributo 'disabled' desativa o botão quando o id for 1, para não voltar para 0.
+          */}
           <button
             onClick={() => setId(id - 1)}
             disabled={id === 1}
@@ -87,7 +91,11 @@ export default function App() {
             Anterior
           </button>
 
-          {/* Botão para ir para o próximo Pokémon. */}
+          {/*
+            Botão "Próximo".
+            Quando clica, o estado 'id' aumenta 1, então a aplicação busca o próximo Pokémon.
+            Como não há condição de limite, ele pode avançar para qualquer número válido.
+          */}
           <button
             onClick={() => setId(id + 1)}
             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium cursor-pointer"
