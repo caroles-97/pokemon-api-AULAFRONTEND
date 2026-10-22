@@ -1,1 +1,6 @@
+/*
+  Importa o Tailwind CSS para o projeto.
+  Com isso, podemos usar classes utilitárias como:
+  bg-slate-100, text-blue-600, rounded-xl, etc.
+*/
 @import 'tailwindcss';
